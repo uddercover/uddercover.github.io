@@ -1,15 +1,21 @@
 👋 Hello!
 ---
+
 I'm a security researcher who has helped secure a combined TVL of over $10M in a variety of DEFI protocols. <br><br>
 I find bugs and vulnerabilities in smart contract code that would otherwise cause issues and loss of funds in production. <br> <br>
 50+ H/M vulnerabilities found across multiple contest platforms. <br>
-***
+
+---
+
 Request an audit: <br>
 - X (twitter) at https://x.com/uddercover <br>
 - Discord [Uddercover](http://discordapp.com/users/1017401377158344715)
-***
-Contests
 ---
+
+Contests
+
+---
+
 | № | Project |  Category| Vulnerabilities | Language | Ranking
 |----------|----------|----------|----------|----------|----------|
 | 1 | Cap | Stablecoin | 2M (1 solo) | Solidity | [1st🥇](https://audits.sherlock.xyz/contests/990/leaderboard)|
