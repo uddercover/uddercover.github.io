@@ -2,6 +2,29 @@
 ---
 
 @import "{{ site.theme }}";
+
+h1, h2, h3 {
+  color: #ff69b4;
+}
+
+strong, em {
+  color: #ff69b4;
+}
+
+hr {
+  border-color: #ff69b4;
+}
+
+button, .btn {
+  background-color: #ff69b4;
+  border-color: #ff69b4;
+}
+
+button:hover, .btn:hover {
+  background-color: #ff1493;
+  border-color: #ff1493;
+}
+
 /* Make table scrollable on mobile */
 div.table-wrapper {
   overflow-x: auto;
