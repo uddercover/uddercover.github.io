@@ -8,6 +8,16 @@ header h1::before {
   content: "";
 }
 
+/* Link colour */
+
+a {
+  color: #69ffb4;
+}
+
+a:hover {
+  color: #00ff87;
+}
+
 /* Pink accents */
 
 h1, h2, h3, h4, h5, h6 {
