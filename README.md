@@ -18,6 +18,8 @@ Proof of Work
 
 50+ H/M vulnerabilities found across multiple contest platforms. <br>
 
+<div style="overflow-x: auto;">
+  
 | № | Project |  Category| Vulnerabilities | Language | Ranking
 |----------|----------|----------|----------|----------|----------|
 | 1 | Cap | Stablecoin | 2M (1 solo) | Solidity | [1st🥇](https://audits.sherlock.xyz/contests/990/leaderboard)|
@@ -37,6 +39,8 @@ Proof of Work
 | 15 | Lend | Cross-chain lending | 3H, 2M | Solidity | [73rd](https://audits.sherlock.xyz/contests/908/leaderboard) |
 | 16 | Plaza Finance | Bonds and leverage | 2H | Solidity | [76th](https://audits.sherlock.xyz/contests/682/leaderboard) |
 | 17 | SecondSwap | Liquidity market | 1H, 1M | Solidity | [139th](https://code4rena.com/audits/2024-12-secondswap) |
+
+</div>
 
 
 
