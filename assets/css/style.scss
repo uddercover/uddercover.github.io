@@ -19,7 +19,7 @@ header h1, header h2 {
 }
 
 h1, h2 {
-  border-bottom-color: #ff69b4 !important;
+  border-bottom: 1px dashed #ff69b4 !important;
 }
 
 strong, em {
@@ -30,8 +30,9 @@ hr {
   border-color: #ff69b4;
 }
 
-li::marker {
-  color: #ff69b4;
+li {
+  list-style-image: url('/assets/images/bullet.svg');
+  marker: color: #ff69b4;
 }
 
 /* Table numbers and text */
