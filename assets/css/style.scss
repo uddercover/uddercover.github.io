@@ -2,3 +2,19 @@
 ---
 
 @import "{{ site.theme }}";
+/* Make table scrollable on mobile */
+div.table-wrapper {
+  overflow-x: auto;
+}
+
+/* General mobile improvements */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  table {
+    font-size: 12px;
+  }
+}
