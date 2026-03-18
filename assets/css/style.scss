@@ -18,7 +18,7 @@ header h1, header h2 {
   color: #ff69b4 !important;
 }
 
-h1, h2 {
+header {
   border-bottom: 1px dashed #ff69b4 !important;
 }
 
@@ -31,8 +31,14 @@ hr {
 }
 
 li {
-  list-style-image: url('/assets/images/bullet.svg');
-  marker: color: #ff69b4;
+  list-style: none;
+}
+
+li::before {
+  content: ">>";
+  color: #ff69b4;
+  margin-right: 8px;
+  font-family: monospace;
 }
 
 /* Table numbers and text */
