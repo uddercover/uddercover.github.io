@@ -18,7 +18,7 @@ Proof of Work
 
 50+ H/M vulnerabilities found across multiple contest platforms. <br>
 
-<div class="table-wrapper">
+<div class="table-wrapper" markdown="1">
   
 | № | Project |  Category| Vulnerabilities | Language | Ranking
 |----------|----------|----------|----------|----------|----------|
