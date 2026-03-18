@@ -1,16 +1,23 @@
 👋 Hello
 ---
-I’m a smart contract security researcher who has helped secure more than $10 million worth of onchain TVL in a variety of DeFi protocols.<br>
+
+I’m a smart contract security researcher who has helped secure more than $10 million worth of onchain TVL in a variety of DeFi protocols. <br>
 I spend my free time looking for bugs and vulnerabilities in smart contract code, mostly through audit contests. 
 <br>
+
 ***
+
 Find me on: <br>
 - [X](https://x.com/uddercover) and
 - [Discord](http://discordapp.com/users/1017401377158344715) (@uddercover)
+
 ***
+
 Proof of Work
 ---
+
 50+ H/M vulnerabilities found across multiple contest platforms. <br>
+
 | № | Project |  Category| Vulnerabilities | Language | Ranking
 |----------|----------|----------|----------|----------|----------|
 | 1 | Cap | Stablecoin | 2M (1 solo) | Solidity | [1st🥇](https://audits.sherlock.xyz/contests/990/leaderboard)|
