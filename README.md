@@ -10,6 +10,7 @@ I find bugs and vulnerabilities in smart contract code that would otherwise caus
 Request an audit: <br>
 - X (twitter) at https://x.com/uddercover <br>
 - Discord [Uddercover](http://discordapp.com/users/1017401377158344715)
+
 ---
 
 Contests
