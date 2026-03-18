@@ -3,8 +3,19 @@
 
 @import "{{ site.theme }}";
 
-h1, h2, h3 {
-  color: #ff69b4;
+/* Remove ./ prefix from header */
+header h1::before {
+  content: "";
+}
+
+/* Pink accents */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ff69b4 !important;
+}
+
+header h1, header h2 {
+  color: #ff69b4 !important;
 }
 
 strong, em {
@@ -15,9 +26,15 @@ hr {
   border-color: #ff69b4;
 }
 
+/* Table numbers and text */
+td, th {
+  color: #ff69b4;
+}
+
 button, .btn {
   background-color: #ff69b4;
   border-color: #ff69b4;
+  color: #000;
 }
 
 button:hover, .btn:hover {
