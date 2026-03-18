@@ -18,6 +18,10 @@ header h1, header h2 {
   color: #ff69b4 !important;
 }
 
+h1, h2 {
+  border-bottom-color: #ff69b4 !important;
+}
+
 strong, em {
   color: #ff69b4;
 }
@@ -26,9 +30,13 @@ hr {
   border-color: #ff69b4;
 }
 
-/* Table numbers and text */
-td, th {
+li::marker {
   color: #ff69b4;
+}
+
+/* Table numbers and text */
+table, td, th {
+  border-color: #ff69b4;
 }
 
 button, .btn {
