@@ -1,11 +1,11 @@
-theme: jekyll-theme-hacker
+remote_theme: pages-themes/hacker@v0.2.0
 plugins:
   - jekyll-relative-links
+  - jekyll-remote-theme
 relative_links:
   enabled: true
   collections: true
 include:
-  - CONTRIBUTING.md
   - README.md
   - LICENSE.md
   - COPYING.md
@@ -15,4 +15,4 @@ include:
   - PULL_REQUEST_TEMPLATE.md
 kramdown:
   parse_block_html: true
-title: Uddercover
+  
