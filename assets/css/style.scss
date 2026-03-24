@@ -239,7 +239,11 @@ div.table-wrapper {
   }
 
   table {
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  th, td {
+    padding: 8px 6px !important;
   }
 
   header .container {
@@ -247,9 +251,14 @@ div.table-wrapper {
     align-items: flex-start;
   }
 
+  p {
+    line-height: 1.6;
+  }
+
   #theme-toggle {
     align-self: flex-end;
   }
+
 }
 
 /* Flowers */
