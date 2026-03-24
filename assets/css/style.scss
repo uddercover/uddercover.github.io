@@ -233,13 +233,36 @@ div.table-wrapper {
   /* Flowers go 2x2 */
   .flower-grid {
     grid-template-columns: repeat(2, 1fr) !important;
+    margin-bottom: 0;
   }
+
+  div.table-wrapper {
+    margin-top: 8px;
+  }
+
+  /* Sakura toggle smaller and vertically centered */
+  #theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Avatar smaller on mobile */
+  header img {
+    width: 35px !important;
+  }
+
 
   /* Table scrolls horizontally */
   table {
     font-size: 11px;
     min-width: 700px;
-    table-layout: auto;
+    table-layout: fixed;
   }
 
   /* Give each column a proportional width */
@@ -272,6 +295,12 @@ div.table-wrapper {
   .tag-filters {
     justify-content: flex-start !important;
     flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .filter-btn {
+    font-size: 11px;
+    padding: 3px 8px;
   }
 
   /* Contact details */
