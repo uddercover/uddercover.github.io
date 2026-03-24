@@ -232,15 +232,22 @@ div.table-wrapper {
 
   /* Flowers go 2x2 */
   .flower-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   /* Table scrolls horizontally */
   table {
     font-size: 11px;
+    min-width: 700px;
     table-layout: auto;
   }
+
+  /* Give each column a proportional width */
+  // table th:nth-child(1) { width: 20%; } /* Project */
+  // table th:nth-child(2) { width: 20%; } /* Category */
+  // table th:nth-child(3) { width: 25%; } /* Vulnerabilities */
+  // table th:nth-child(4) { width: 18%; } /* Language */
+  // table th:nth-child(5) { width: 17%; } /* Rank */
 
   th, td {
     padding: 6px 4px !important;
