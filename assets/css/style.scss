@@ -287,8 +287,9 @@ div.table-wrapper {
 
   /* Header stays compact */
   header {
-    margin: 8px !important;
+    margin: 0px !important;
     padding: 6px 0;
+    max-width: 1800px !important;
   }
 
   header h1 {
