@@ -244,17 +244,6 @@ div.table-wrapper {
     margin-top: 8px;
   }
 
-  /* Sakura toggle smaller and vertically centered */
-  #theme-toggle {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-    line-height: 32px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   /* Avatar smaller on mobile */
   header img {
@@ -407,9 +396,14 @@ div.table-wrapper {
   width: 40px;
   height: 40px;
   font-size: 20px;
-  cursor: pointer;
   transition: border-color 0.2s, transform 0.6s ease, filter 0.3s;
   flex-shrink: 0;
+  line-height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   filter: brightness(1);
 }
 
