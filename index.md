@@ -77,7 +77,6 @@ Find me on: <br>
 </div>
 <br>
 
-<div class="table-wrapper" markdown="1">
 
 <div class="tag-filters" style="justify-content: flex-end;" markdown="0">
 <button class="filter-btn active" onclick="filterTable('all')">All</button>
@@ -87,6 +86,8 @@ Find me on: <br>
 <button class="filter-btn" onclick="filterTable('Vault')">Vault</button>
 <button class="filter-btn" onclick="filterTable('Math')">Math</button>
 </div>
+
+<div class="table-wrapper" markdown="1">
   
 | PROJECT |  CATEGORY| VULNERABILITIES | LANGUAGE | RANK
 |----------|----------|----------|----------|----------|
