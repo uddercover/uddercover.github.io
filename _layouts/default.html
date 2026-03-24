@@ -13,48 +13,6 @@
 <link rel="icon"
   href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' x='50' text-anchor='middle' font-size='90'>🌸</text></svg>">
 
-<script>
-  document.querySelectorAll('a').forEach(link => {
-    if (link.hostname !== window.location.hostname) {
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener noreferrer');
-    }
-  });
-
-  function filterTable(tag) {
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    document.querySelectorAll('table tbody tr').forEach(row => {
-      if (tag === 'all' || row.innerText.includes(tag)) {
-        row.style.display = '';
-      } else {
-        row.style.display = 'none';
-      }
-    });
-  }
-
-  function toggleTheme() {
-    const isLight = document.body.classList.contains('light-mode');
-    const btn = document.getElementById('theme-toggle');
-
-    btn.style.transition = 'transform 0.6s ease';
-    btn.style.transform = isLight ? 'rotate(-360deg)' : 'rotate(360deg)';
-
-    setTimeout(() => {
-      btn.style.transition = 'none';
-      btn.style.transform = 'rotate(0deg)';
-    }, 600);
-
-    document.body.classList.toggle('light-mode');
-    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-  }
-
-  // Remember preference on page load
-  if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
-  }
-</script>
-
 <body>
   <header>
     <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:nowrap;">
@@ -74,6 +32,48 @@
       {{ content }}
     </section>
   </div>
+
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.hostname !== window.location.hostname) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+
+    function filterTable(tag) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      document.querySelectorAll('table tbody tr').forEach(row => {
+        if (tag === 'all' || row.innerText.includes(tag)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleTheme() {
+      const isLight = document.body.classList.contains('light-mode');
+      const btn = document.getElementById('theme-toggle');
+
+      btn.style.transition = 'transform 0.6s ease';
+      btn.style.transform = isLight ? 'rotate(-360deg)' : 'rotate(360deg)';
+
+      setTimeout(() => {
+        btn.style.transition = 'none';
+        btn.style.transform = 'rotate(0deg)';
+      }, 600);
+
+      document.body.classList.toggle('light-mode');
+      localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+    }
+
+    // Remember preference on page load
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+    }
+  </script>
 </body>
 
 </html>

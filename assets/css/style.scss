@@ -226,16 +226,50 @@ div.table-wrapper {
 /* General mobile improvements */
 @media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 13px;
     padding: 10px;
   }
 
+  /* Flowers go 2x2 */
+  .flower-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Table scrolls horizontally */
   table {
     font-size: 11px;
+    table-layout: auto;
   }
 
   th, td {
-    padding: 8px 6px !important;
+    padding: 6px 4px !important;
+  }
+
+  /* Hide language column on mobile */
+  // th:nth-child(4), td:nth-child(4) {
+  //   display: none;
+  // }
+
+  /* Header stays compact */
+  header {
+    margin: 8px;
+    padding: 6px 0;
+  }
+
+  header h1 {
+    font-size: 16px !important;
+  }
+
+  /* Filter buttons wrap */
+  .tag-filters {
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+  }
+
+  /* Contact details */
+  .contact-details {
+    padding: 10px;
   }
 }
 
