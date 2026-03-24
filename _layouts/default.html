@@ -1,45 +1,79 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
+<html lang="{{ site.lang | default: " en-US" }}">
 
-{% seo %}
-  </head>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' x='50' text-anchor='middle' font-size='90'>🌸</text></svg>">
-  <body>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  {% include head-custom.html %}
 
-    <header>
-      <div class="container">
-        <a id="a-title" href="{{ '/' | relative_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }} 🌸</h1>
+  {% seo %}
+</head>
+<link rel="icon"
+  href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' x='50' text-anchor='middle' font-size='90'>🌸</text></svg>">
+
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    if (link.hostname !== window.location.hostname) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+
+  function filterTable(tag) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    document.querySelectorAll('table tbody tr').forEach(row => {
+      if (tag === 'all' || row.innerText.includes(tag)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  function toggleTheme() {
+    const isLight = document.body.classList.contains('light-mode');
+    const btn = document.getElementById('theme-toggle');
+
+    btn.style.transition = 'transform 0.6s ease';
+    btn.style.transform = isLight ? 'rotate(-360deg)' : 'rotate(360deg)';
+
+    setTimeout(() => {
+      btn.style.transition = 'none';
+      btn.style.transform = 'rotate(0deg)';
+    }, 600);
+
+    document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+  }
+
+  // Remember preference on page load
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+  }
+</script>
+
+<body>
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:nowrap;">
+      <div>
+        <a id="a-title" href="{{ '/' | relative_url }}" style="display:flex; align-items:center; gap:10px;">
+          <img src="{{ site.github.owner_gravatar_url }}" style="width:50px; border-radius:50%;">
+          <h1 style="margin:0;">{{ site.title | default: "" }}</h1>
         </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-
-        <section id="downloads">
-          {% if site.show_downloads %}
-            <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
-            <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
-          {% endif %}          
-        </section>
       </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        {{ content }}
-      </section>
+      <button id="theme-toggle" onclick="toggleTheme()">🌸</button>
     </div>
-    <script>
-      document.querySelectorAll('a').forEach(link => {
-        if (link.hostname !== window.location.hostname) {
-          link.setAttribute('target', '_blank');
-          link.setAttribute('rel', 'noopener noreferrer');
-        }
-      });
-    </script>
-  </body>
+  </header>
+
+
+  <div class="container">
+    <section id="main_content">
+      {{ content }}
+    </section>
+  </div>
+</body>
+
 </html>

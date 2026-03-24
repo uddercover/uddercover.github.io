@@ -15,4 +15,5 @@ include:
   - PULL_REQUEST_TEMPLATE.md
 kramdown:
   parse_block_html: true
+title: ""
   
