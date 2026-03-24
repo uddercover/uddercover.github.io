@@ -1,38 +1,63 @@
----
----
-
+--- 
+--- 
 @import "{{ site.theme }}";
+
+//main content
+#main_content {
+  font-size: 15px;
+}
 
 /* Remove ./ prefix from header */
 header h1::before {
-  content: "";
+  content: none;
+}
+
+header h1::after {
+  content: none;
 }
 
 /* Link colour */
 
 a {
   color: #69ffb4;
+  text-decoration: none;
 }
 
 a:hover {
   color: #ff69b4;
+  text-decoration: underline;
 }
 
 /* Pink accents */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #ff69b4 !important;
 }
 
-header h1, header h2 {
+header h1,
+header h2 {
   color: #ff69b4 !important;
 }
 
 header {
-  border-bottom: 1px dashed #ff69b4 !important;
+  position: sticky;
+  top: 0;
+  margin-top: 0;
+  z-index: 100;
+  background: #151515;
+  border: 1px solid #ff69b450;
+  border-radius: 12px;
+  max-width: 1660px;
+  margin: 16px auto;
 }
 
-strong, em {
+strong,
+em {
   color: #ff69b4;
 }
 
@@ -52,20 +77,145 @@ li::before {
   font-family: monospace;
 }
 
-/* Table numbers and text */
-table, td, th {
-  border-color: #ff69b4;
+p {
+  line-height: 2.5; /* 2.5 times the font size */
 }
 
-button, .btn {
+//button styling
+button,
+.btn {
   background-color: #ff69b4;
   border-color: #ff69b4;
   color: #000;
 }
 
-button:hover, .btn:hover {
+button:hover,
+.btn:hover {
   background-color: #ff1493;
   border-color: #ff1493;
+}
+
+/* Table numbers and text */
+table, 
+thead,
+tr,
+th {
+  letter-spacing: 0.05em;
+  
+}
+
+table {
+  border: 1px solid #ff69b450;
+  border-radius: 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+thead {
+  background: #ff69b408;
+  color: #b7b6b6;
+  font-family: monospace;
+}
+
+table th {
+  padding: 12px 8px !important;
+}
+
+tr,
+th {
+  border-bottom: 1px solid #ff69b450;
+}
+
+td:nth-child(1)::before {
+  content: "★";
+  color: #ff69b4;
+  margin-right: 8px;
+  font-family: monospace;
+}
+
+// table row styling
+tbody tr:hover {
+  background: #ff69b425;
+}
+
+// table language tags
+.lang-solidity {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.lang-solidity img {
+  color: #ff69b4;
+}
+
+// table tags and filter buttons
+.tag {
+  border: 1px solid #ff69b450;
+  border-radius: 20px;
+  padding: 2px 10px;
+  background: #ff69b408;
+  color: #ff69b4;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.tag-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #ff69b450;
+  border-radius: 20px;
+  padding: 4px 12px;
+  color: #ff69b4;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: #ff69b4;
+  border-color: #ff69b4;
+  color: #000;
+}
+
+// table column styling
+.high {
+  color: #fa6363;
+  font-weight: 700;
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.medium {
+  color: #fbc458;
+  font-weight: 700;
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.low {
+  color: #a3a3a3;
+  font-weight: 700;
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.vuln-text {
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.rank {
+  font-size: 13px;
+  font-family: monospace;
 }
 
 /* Make table scrollable on mobile */
@@ -79,8 +229,137 @@ div.table-wrapper {
     font-size: 14px;
     padding: 10px;
   }
-  
+
   table {
     font-size: 12px;
   }
+}
+
+/* Flowers */
+.flower-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.flower-item {
+  cursor: default;
+  transition: transform 0.3s ease;
+  border: 1px solid #ff69b430;
+  border-radius: 12px;
+  padding: 12px 8px;
+  background: #ff69b408;
+}
+
+.flower-item:hover {
+  transform: scale(1.12);
+  border-color: #ff69b4;
+}
+
+.flower-item svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.flower-item:hover .petal {
+  fill: #ff1493;
+}
+
+.flower-item:hover .center {
+  fill: #ffb6c1;
+}
+
+.petal {
+  transition: fill 0.3s ease;
+}
+
+.center {
+  transition: fill 0.3s ease;
+}
+
+.flower-stat {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff69b4;
+  margin-top: 8px;
+}
+
+.flower-item:hover .flower-stat {
+  color: #ff69b4;
+}
+
+.flower-sublabel {
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: #a56f8a;
+  margin-top: 4px;
+}
+
+// Contact details
+.contact-details {
+  border: 1px solid #ff69b450; 
+  border-radius: 8px; 
+  padding: 16px 16px;
+}
+
+// light mode button styling and effects
+#theme-toggle {
+  background: transparent;
+  border: 1px solid #ff69b450;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.6s ease, filter 0.3s;
+  flex-shrink: 0;
+  filter: brightness(1);
+}
+
+#theme-toggle:hover {
+  border-color: #ff69b4;
+  // transform: rotate(360deg);
+  // transition: border-color 0.2s, transform 0.8s ease;
+}
+
+// body.light-mode #theme-toggle {
+//   // filter: brightness(0.8);
+// }
+
+body.light-mode {
+  background: #fff0f5;
+  color: #333;
+  text-shadow: none;
+}
+
+body.light-mode * {
+  text-shadow: none !important;
+}
+
+body.light-mode header {
+  background: #ffe4ef;
+}
+
+body.light-mode a {
+  color: #0a8a5a;
+}
+
+body.light-mode a:hover {
+  color: #ff1493;
+}
+
+body.light-mode table {
+  background: #fff8fb;
+}
+
+body.light-mode table img {
+  filter: invert(1);
+}
+
+body.light-mode thead {
+  color: #fa91c5;
 }
