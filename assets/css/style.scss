@@ -230,6 +230,10 @@ div.table-wrapper {
     padding: 10px;
   }
 
+  p {
+    line-height: 2; /* 2 times the font size */
+  }
+
   /* Flowers go 2x2 */
   .flower-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -283,7 +287,7 @@ div.table-wrapper {
 
   /* Header stays compact */
   header {
-    margin: 8px;
+    margin: 8px !important;
     padding: 6px 0;
   }
 
@@ -296,6 +300,8 @@ div.table-wrapper {
     justify-content: flex-start !important;
     flex-wrap: wrap;
     gap: 6px;
+    position: sticky !important;
+    
   }
 
   .filter-btn {
@@ -303,9 +309,17 @@ div.table-wrapper {
     padding: 3px 8px;
   }
 
-  /* Contact details */
-  .contact-details {
-    padding: 10px;
+  // .contact-details {
+  //   padding-top: 4px;
+  //   padding-bottom: 6px; 
+  //   padding-left: 12px;
+  //   padding-right: 12px;
+  // }
+
+  /* Reduce space below h2 Hello */
+  .hello h2 {
+    margin-bottom: 0 !important;
+    margin-top: 20px !important;
   }
 }
 
@@ -377,7 +391,12 @@ div.table-wrapper {
 .contact-details {
   border: 1px solid #ff69b450; 
   border-radius: 8px; 
-  padding: 16px 16px;
+  padding-top: 0px;
+  padding-bottom: 6px; 
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 // light mode button styling and effects

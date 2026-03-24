@@ -2,13 +2,11 @@
 layout: default
 ---
 
-Hello,
----
+<div class="hello"><h2>Hello,</h2></div>
 
 
 I’m Uddercover, a smart contract security researcher who has helped secure more than $10 million worth of onchain TVL in a variety of DeFi protocols. <br>
 I spend my free time looking for bugs and vulnerabilities in smart contract code, mostly through audit contests. 
-<br><br>
 
 <div class="contact-details">
 Find me on: <br>
