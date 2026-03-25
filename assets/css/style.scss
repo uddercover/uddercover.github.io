@@ -464,10 +464,10 @@ body.light-mode table {
   background: #fff8fb;
 }
 
-body.light-mode table img {
-  filter: invert(1);
-}
-
 body.light-mode thead {
   color: #fa91c5;
 }
+
+// body.light-mode .lang-icon {
+//   filter: invert(27%) sepia(50%) saturate(500%) hue-rotate(290deg) brightness(80%) contrast(103%);
+// }
