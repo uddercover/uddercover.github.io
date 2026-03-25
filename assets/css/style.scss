@@ -47,7 +47,6 @@ header h2 {
 header {
   position: sticky;
   top: 0;
-  margin-top: 0;
   z-index: 100;
   background: #151515;
   border: 1px solid #ff69b450;
@@ -146,8 +145,13 @@ tbody tr:hover {
   font-size: 13px;
 }
 
-.lang-solidity img {
-  color: #ff69b4;
+.lang-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 4px;
+  filter: invert(61%) sepia(10%) saturate(5930%) hue-rotate(296deg) brightness(102%) contrast(103%);
+  opacity: 0.5;
 }
 
 // table tags and filter buttons
@@ -310,6 +314,17 @@ div.table-wrapper {
     margin-bottom: 0 !important;
     margin-top: 20px !important;
   }
+
+  // for solidity language tag in table
+  .lang-solidity {
+    font-size: 0;
+  }
+
+  .lang-icon {
+    font-size: 16px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 
@@ -365,9 +380,9 @@ div.table-wrapper {
   margin-top: 8px;
 }
 
-.flower-item:hover .flower-stat {
-  color: #ff69b4;
-}
+// .flower-item:hover .flower-stat {
+//   color: #ff1493;
+// }
 
 .flower-sublabel {
   font-family: monospace;
@@ -436,10 +451,6 @@ div.table-wrapper {
   // transform: rotate(360deg);
   // transition: border-color 0.2s, transform 0.8s ease;
 }
-
-// body.light-mode #theme-toggle {
-//   // filter: brightness(0.8);
-// }
 
 body.light-mode {
   background: #fff0f5;
