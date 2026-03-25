@@ -249,7 +249,6 @@ div.table-wrapper {
     width: 35px !important;
   }
 
-
   /* Table scrolls horizontally */
   table {
     font-size: 11px;
@@ -257,21 +256,9 @@ div.table-wrapper {
     table-layout: fixed;
   }
 
-  /* Give each column a proportional width */
-  // table th:nth-child(1) { width: 20%; } /* Project */
-  // table th:nth-child(2) { width: 20%; } /* Category */
-  // table th:nth-child(3) { width: 25%; } /* Vulnerabilities */
-  // table th:nth-child(4) { width: 18%; } /* Language */
-  // table th:nth-child(5) { width: 17%; } /* Rank */
-
   th, td {
     padding: 6px 4px !important;
   }
-
-  /* Hide language column on mobile */
-  // th:nth-child(4), td:nth-child(4) {
-  //   display: none;
-  // }
 
   /* Header stays compact */
   header {
@@ -297,13 +284,6 @@ div.table-wrapper {
     padding: 3px 8px;
   }
 
-  // .contact-details {
-  //   padding-top: 4px;
-  //   padding-bottom: 6px; 
-  //   padding-left: 12px;
-  //   padding-right: 12px;
-  // }
-
   /* Reduce space below h2 Hello */
   .hello h2 {
     margin-bottom: 0 !important;
@@ -319,6 +299,14 @@ div.table-wrapper {
     font-size: 16px;
     width: 18px;
     height: 18px;
+  }
+
+  td:nth-child(1)::before {
+    font-size: 16px;
+  }
+
+  td:nth-child(1) {
+    font-size: 12px;
   }
 }
 
