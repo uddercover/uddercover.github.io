@@ -11,7 +11,7 @@ I spend my free time looking for bugs and vulnerabilities in smart contract code
 <div class="contact-details">
 Find me on: <br>
 - [X](https://x.com/uddercover) and
-- [Discord](http://discordapp.com/users/1017401377158344715) (@uddercover)
+- [Discord](http://discordapp.com/users/1017401377158344715)
 </div>
 <br>
 

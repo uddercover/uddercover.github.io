@@ -22,7 +22,9 @@
           <h1 style="margin:0;">{{ site.title | default: "" }}</h1>
         </a>
       </div>
-      <button id="theme-toggle" onclick="toggleTheme()">🌸</button>
+      <div style="position:relative; display:flex; align-items:center; gap:6px;">
+        <button id="theme-toggle" onclick="toggleTheme()">🌸</button>
+      </div>
     </div>
   </header>
 
@@ -57,6 +59,8 @@
       const isLight = document.body.classList.contains('light-mode');
       const btn = document.getElementById('theme-toggle');
 
+      btn.classList.add('clicked');
+
       btn.style.transition = 'transform 0.6s ease';
       btn.style.transform = isLight ? 'rotate(-360deg)' : 'rotate(360deg)';
 
@@ -67,6 +71,10 @@
 
       document.body.classList.toggle('light-mode');
       localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
     }
 
     // Remember preference on page load

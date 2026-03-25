@@ -312,6 +312,7 @@ div.table-wrapper {
   }
 }
 
+
 /* Flowers */
 .flower-grid {
   display: grid;
@@ -400,11 +401,34 @@ div.table-wrapper {
   flex-shrink: 0;
   line-height: 32px;
   padding: 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   filter: brightness(1);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+#theme-toggle::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #ff69b4;
+  border-radius: 50%;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+#theme-toggle.clicked::after {
+  animation: none;
+  display: none;
 }
 
 #theme-toggle:hover {
