@@ -57,7 +57,7 @@ Find me on: <br>
 <circle class="center" cx="0" cy="0" r="12" fill="#ff69b4"/>
 </g>
 </svg>
-<div class="flower-stat">50+</div>
+<div class="flower-stat">60+</div>
 <div class="flower-sublabel">H/M vulnerabilities</div>
 </div>
 <div class="flower-item">
